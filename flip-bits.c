@@ -7,15 +7,23 @@
 int main() {
 
 uint32_t num;
-int i, n;
+int i, j, n;
 scanf("%d", &n);
-num = 2147483647;
-for (i=0;i<32;i++)
+int a[n];
+for (i=0;i<n;i++)
 {
-num ^= 1 << i;
+	scanf("%d", &a[i]);
 }
-printf("%u\n", num);
+for (j=0;j<n;j++)
+{
 
+	num = a[j];
+	for (i=0;i<32;i++)
+	{
+		num ^= 1 << i;
+	}
+	printf("%u\n", num);
+}
     return 0;
 }
 
